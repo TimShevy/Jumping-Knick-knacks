@@ -26,6 +26,113 @@ p {
   margin: 0 0 10px;
 }
 
+/* ===RegEnterPopUp=========
+======================= */
+.wrapperPopUp__one, .wrapperPopUp__two {
+  display: none;
+}
+.active__wrapperPopUp {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background: rgba(0, 0, 0, 0.6);
+}
+.EnterPopUp {
+  padding: 73px 61px;
+  width: 640px;
+  height: 456px;
+
+  position: relative;
+  
+  text-align: center;
+  
+  background: #FFFFFF;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+}
+.EnterPopUp h2 {
+  padding-bottom: 21px;
+  font-weight: 700;
+  font-size: 33px;
+  line-height: 37px;
+  color: #FF6161;
+}
+.EnterPopUp .emailSend {
+  margin-top: 15px;
+}
+.subPopUp {
+  margin: 30px 0 15px;
+  padding: 11px 53px;
+  background: #FF6161;
+  border-radius: 36.2748px;
+  border: none;
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 28px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.subPopUp:hover {
+  border: 5px solid var(--red-back);
+  padding: 6px 48px;
+}
+.subPopUp:active {
+  border: 5px solid var(--red);
+  background: var(--red-back);
+  padding: 6px 48px;
+}
+.EnterPopUp a {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  color: var(--red);
+
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+.EnterPopUp a:active {
+  border: none;
+  text-decoration: none;
+}
+.EnterPopUp a::after {
+  display: block;
+    content: "";
+    background: var(--red);
+    height: 2px;
+    width: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: width .3s ease-in-out;
+}
+.EnterPopUp a:hover::after,
+.EnterPopUp a:focus::after {
+  width: 70%;
+}
+.EnterPopUp a.active::after {
+  display: block;
+  content: "";
+  background: var(--red);
+  border-radius: 12.1976px;
+  height: 2px;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+
 /* ===Nav__Bar=========
 ======================= */
 
@@ -582,7 +689,7 @@ p {
 }
 .emailSend {
   display: flex;
-  gap: 30px;
+  gap: 15px 30px;
   margin-top: 36px;
 }
 input {
